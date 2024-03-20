@@ -26,6 +26,7 @@ class RoomViewModel: ViewModel() {
 
     private val _onJoinEvent = MutableSharedFlow<String>()
     val onJoinEvent = _onJoinEvent.asSharedFlow()
+//    val roomData = roomState.rooms
 
     fun onRoomEnter(name: String) {
         _roomName.value = roomName.value.copy(
@@ -33,13 +34,15 @@ class RoomViewModel: ViewModel() {
         )
     }
 
+//    data class Room(val roomName: String, val roomOwner: String)
+
     fun main() {
         GlobalScope.launch(Dispatchers.IO) {
-            val url = "https://mocki.io/v1/4dd85dbc-bc94-4ce2-bad9-d99d6e73e433"
-            val response = makeGetRequest(url)
-            val texts = parseResponse(response)
-            roomTexts.value = texts
-            printRoomTexts(response)
+//            val url = "https://mocki.io/v1/4dd85dbc-bc94-4ce2-bad9-d99d6e73e433"
+//            val response = makeGetRequest(url)
+//            val texts = parseResponse(response)
+//            roomTexts.value = texts
+//            printRoomTexts(response)
         }
     }
 
@@ -68,7 +71,7 @@ class RoomViewModel: ViewModel() {
         connection.requestMethod = "GET"
 
         val responseCode = connection.responseCode
-        if (responseCode == HttpURLConnection.HTTP_OK) {
+        if (responseCode == HttpURLConnection.HTTP_CREATED || responseCode == HttpURLConnection.HTTP_OK) {
             val bufferedReader = BufferedReader(InputStreamReader(connection.inputStream))
             val response = StringBuilder()
 

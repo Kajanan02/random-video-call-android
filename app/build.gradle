@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+//    id 'kotlin-kapt'
 }
 
 android {
@@ -77,4 +78,8 @@ dependencies {
 
     // Coroutine Lifecycle Scopes
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+
+//    implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.0.0")
+//    implementation("org.mongodb:bson-kotlin:5.0.0")
+
 }

@@ -19,6 +19,8 @@ import androidx.navigation.navArgument
 import com.plcoding.agorauikit.ui.theme.AgoraUIKitTheme
 
 const val APP_ID = "8f44d24766f445d69905621ffb5114ab"
+const val TOKEN = "007eJxTYPjX+a7xX9r/jA1neTKaZ/Yemql1KrCr6GrSFhk2m437eLYrMFikmZikGJmYm5kBGaYpZpaWBqZmRoZpaUmmhoYmiUnqMp9TGwIZGYImM7MyMkAgiM/CUJKaW8DAAADNUB/Z"
+//const val channelName = "temp"
 
 @ExperimentalUnsignedTypes
 class MainActivity : ComponentActivity() {
